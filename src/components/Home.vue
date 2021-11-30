@@ -137,6 +137,45 @@
     <h1>{{count}}</h1>
     <button v-on:click="count=count+1"> + </button><br/><br/>
     <button v-on:click="count=count-1"> - </button>
+    <br /><br />
+    <h1>Slots With Example</h1>
+    <h2>Childs Component</h2>
+    <Childs>
+        <template v-slot:h1 >
+            <h2 >Sabbir</h2>
+        </template>
+        <template v-slot:content >
+            <h2>Content From Home Component Slot</h2>
+        </template>
+        <template v-slot:btn >
+        <button>Buy Now</button>
+        </template>
+    <br /><br />
+    </Childs>
+    <Childs>
+        <template v-slot:h1 >
+            <h2 >Maruf</h2>
+        </template>
+        <template v-slot:content >
+            <h2>Content From Home Component Slot</h2>
+        </template>
+        <template v-slot:link >
+            <a href="#" >Hi From Home Component Slot link</a>
+        </template>
+        <template v-slot:image >
+            <img src="../assets/imge.jpeg">
+        </template>
+    <br /><br />
+    </Childs>
+    <br /><br />
+    <h1>Dynamic Component</h1>
+    <button v-on:click="tab='Php'">Load Php</button>
+    <button v-on:click="tab='Java'">Load Java</button>
+    <button v-on:click="tab='Node'">Load Node</button>
+    <component :is="tab"/>
+    <teleport to="#footer">
+    <Footer/>
+    </teleport>
 </template>
 
 <script>
@@ -145,6 +184,11 @@ import User from './User.vue'
 import Student from './Student.vue'
 import Teacher from './Teacher.vue'
 import NonPrPS from './NonPrPS.vue'
+import Childs from './Childs.vue'
+import Php from './Php.vue'
+import Java from './Java.vue'
+import Node from './Node.vue'
+import Footer from './Footer.vue'
 export default {
     name: 'Home',
     components: {
@@ -152,7 +196,12 @@ export default {
         User,
         Student,
         Teacher,
-        NonPrPS
+        NonPrPS,
+        Childs,
+        Php,
+        Java,
+        Node,
+        Footer
     },
 
 
@@ -217,6 +266,7 @@ export default {
             dollors:100,
             tk:84,
             discount:10,
+            tab:'Java'
             
         }
     },

@@ -173,6 +173,8 @@
     <button v-on:click="tab='Java'">Load Java</button>
     <button v-on:click="tab='Node'">Load Node</button>
     <component :is="tab"/>
+    <br /><br />
+    <h1>Before Create,Before Mount,Create,Mounted,Before Update,Update,Before Unmount,Unmount</h1>
     <teleport to="#footer">
     <Footer/>
     </teleport>

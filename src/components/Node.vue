@@ -1,5 +1,5 @@
 <template>
-    <h1>Node Language Component</h1>
+    <h2>Node Language Component</h2>
 </template>
 <script>
     export default{

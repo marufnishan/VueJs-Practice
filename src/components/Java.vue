@@ -1,5 +1,5 @@
 <template>
-    <h1>Java Language Component</h1>
+    <h2>Java Language Component</h2>
 </template>
 <script>
     export default{

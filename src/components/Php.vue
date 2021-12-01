@@ -1,5 +1,5 @@
 <template>
-    <h1>Php Language Component</h1>
+    <h2>Php Language Component</h2>
 </template>
 <script>
     export default{
